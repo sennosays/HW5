@@ -10,8 +10,9 @@ end
 function inner_cols_multiply(a::Array{Float64,2},b::Array{Float64,1})
     num_rows = length(a[:,1]); 
     num_cols = length(a[1,:]); 
-    c = zeros(Float64,num_rows); 
     @assert(length(b) == num_cols);
+
+    c = zeros(Float64,num_rows); 
     
     for i in 1:num_rows
         for j in 1:num_cols
@@ -24,8 +25,9 @@ end
 function inner_rows_multiply(a::Array{Float64,2},b::Array{Float64,1})
     num_rows = length(a[:,1]); 
     num_cols = length(a[1,:]); 
-    c = zeros(Float64,num_rows); 
     @assert(length(b) == num_cols);
+    c = zeros(Float64,num_rows); 
+    
     
     for j in 1:num_cols
         for i in 1:num_rows
